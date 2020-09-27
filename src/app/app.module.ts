@@ -8,6 +8,8 @@ import { CategoriesComponent } from './categories/categories.component';
 import { ProductTableComponent } from './product-table/product-table.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,12 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     CategoriesComponent,
     ProductTableComponent,
     NotFoundComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    WelcomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
