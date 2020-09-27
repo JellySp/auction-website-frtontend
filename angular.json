@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "auction-website-frtontend"
+    }
+  },
+  "defaultProject": "auction-website-frtontend",
+  "cli": {
+    "analytics": "e66565b4-7871-4edc-9e9f-7530c7be4b94"
+  }
 }
