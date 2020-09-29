@@ -1,0 +1,24 @@
+.router-outlet {
+  display: inline-block;
+  position: center;
+  margin: auto;
+}
+
+.app-categories {
+  display: inline-block;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+}
+
+.app-footer {
+  display: inline-block;
+  width: 100%;
+  background-color: gainsboro;
+  margin: auto;
+  text-align: center;
+
+
+}
