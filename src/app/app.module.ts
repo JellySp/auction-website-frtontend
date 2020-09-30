@@ -1,15 +1,27 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { CategoriesComponent } from './categories/categories.component';
-import { ProductTableComponent } from './product-table/product-table.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { SearchBarComponent } from './search-bar/search-bar.component';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { AppRoutingModule } from './app-routing.module';
+import {AppComponent} from './app.component';
+import {HeaderComponent} from './header/header.component';
+import {FooterComponent} from './footer/footer.component';
+import {CategoriesComponent} from './categories/categories.component';
+import {ProductTableComponent} from './product-table/product-table.component';
+import {NotFoundComponent} from './not-found/not-found.component';
+import {SearchBarComponent} from './search-bar/search-bar.component';
+import {WelcomeComponent} from './welcome/welcome.component';
+import {AppRoutingModule} from './app-routing.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import 'hammerjs';
+import {FormsModule} from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
@@ -24,9 +36,22 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    FlexLayoutModule,
+    FormsModule,
+    MatIconModule,
+    MatSliderModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
