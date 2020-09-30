@@ -1,13 +1,15 @@
-
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span id="logo" class="fa fa-hand-o-right">Logo</span>
-    <div id="nav1">
-      <a mat-button><span class="fa fa-home fa-lg"></span> Home</a>
-      <a mat-button><span class="fa fa-info fa-lg"></span> About</a>
-      <a mat-button><span class="fa fa-heart fa-lg"></span> Favorite</a>
-      <a mat-button><span class="fa mat-form-field-appearance-legacy fa-lg">Signup</span></a>
-      <a mat-button><span class="fa fa-sign-in fa-lg">Login</span></a>
-    </div>
-  </mat-toolbar-row>
+<mat-toolbar color="primary" class="expanded-toolbar">
+    <span>
+      <span id="logo" class="fa fa-hand-o-right">Logo</span>
+      <button mat-button routerLink="index"><mat-icon>home</mat-icon>Home</button>
+      <a mat-button routerLink="/"><span class="fa fa-info fa-lg"></span>About Us</a>
+      <a mat-button><span class="fa fa-heart fa-lg"></span>Favorite</a>
+    </span>
+  <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+    <button mat-button routerLink="login">
+      <mat-icon>power_settings_new</mat-icon>
+      Login
+    </button>
+  </div>
 </mat-toolbar>
+
