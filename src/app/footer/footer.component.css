@@ -1,15 +1,12 @@
 footer {
   justify-content: center;
 }
-
 .logo {
   height: 60px;
 }
-
 .logo-container {
   width: 100%;
 }
-
 a {
   background-color: transparent;
 }
@@ -17,7 +14,6 @@ a:active,
 a:hover {
   outline-width: 0;
 }
-
 a {
   color: #0366d6;
   text-decoration: none;
@@ -36,7 +32,6 @@ ul {
   margin-top: 0;
   padding-left: 0;
 }
-
 :-ms-input-placeholder {
   color: #6a737d;
 }
@@ -59,34 +54,6 @@ input::-webkit-outer-spin-button {
 .col-6 {
   width: 33.3333333%;
 }
-@media (min-width: 544px) {
-  .mb-sm-0 {
-    margin-bottom: 0 !important;
-  }
-  .d-sm-flex {
-    display: flex !important;
-  }
-  .p-responsive {
-    padding-left: 40px !important;
-    padding-right: 40px !important;
-  }
-}
-@media (min-width: 1012px) {
-  .col-lg-2 {
-    width: 19.99999%;
-  }
-  .logo-container {
-    flex: 1;
-  }
-  .p-responsive {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
-  .container-xl {
-    width: 80%;
-  }
-}
-
 .bg-gray-light {
   background-color: #fafbfc !important;
 }
@@ -126,12 +93,10 @@ input::-webkit-outer-spin-button {
 .mt-6 {
   margin-top: 40px !important;
 }
-
 @media (min-width: 768px) {
   .mb-md-2 {
     margin-bottom: 8px !important;
   }
-
   .pr-md-0 {
     padding-right: 0 !important;
   }
@@ -141,7 +106,6 @@ input::-webkit-outer-spin-button {
   .h2 {
     font-size: 24px !important;
   }
-
   .container-xl {
     width: 90%;
   }
@@ -156,11 +120,9 @@ input::-webkit-outer-spin-button {
 .pt-5 {
   padding-top: 32px !important;
 }
-
 .h2 {
   font-size: 22px !important;
 }
-
 .h5 {
   font-size: 14px !important;
 }
@@ -193,6 +155,9 @@ input::-webkit-outer-spin-button {
   padding-left: 16px !important;
   padding-right: 16px !important;
 }
-
-
-
+.btn-facebook {color:#fff!important; background-color:#3b5998!important;}
+.btn-google-plus{color:#fff!important;background-color:#dd4b39!important;}
+.btn-youtube{color:#fff!important;background-color:#ff4b39!important;}
+.btn-linkedin{color:#fff!important;background-color:#007bb6!important;}
+.btn-twitter{color:#fff!important;background-color:#55acee!important;}
+.btn-mail{color:#fff!important;background-color:#512DA8!important;}
