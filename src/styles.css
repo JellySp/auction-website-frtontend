@@ -17,4 +17,22 @@ body {
   display:flex;
 }
 
+/*.footerCategories {*/
+/*  list-style-type: none;*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*}*/
+
+/*.footerCategory {*/
+/*  margin: 40px;*/
+/*  list-style-type: none;*/
+/*  text-align: left;*/
+/*}*/
+
+/*.footerCategoryHeader {*/
+/*  font-weight: bold;*/
+/*  margin-bottom: 5px;*/
+/*  margin-top: 5px;*/
+/*}*/
+
 
