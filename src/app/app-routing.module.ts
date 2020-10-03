@@ -5,11 +5,12 @@ import {NotFoundComponent} from './not-found/not-found.component';
 import {LoginComponent} from './login/login.component';
 import {SignupComponent} from './signup/signup.component';
 
+
 const routes: Routes = [
   {path: '', component: WelcomeComponent}, // login // default path
   {path: 'login', component: LoginComponent}, // login // default path
   {path: 'signup', component: SignupComponent}, // signup
-  {path: 'welcome', component: WelcomeComponent}, // welcome
+  {path: 'welcome', component: WelcomeComponent}, // welcome//
   {path: '**', component: NotFoundComponent} // ** for anything else. NB! This has to be the last route
 ];
 

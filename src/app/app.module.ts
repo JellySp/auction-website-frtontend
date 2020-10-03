@@ -21,7 +21,10 @@ import {MatSliderModule} from '@angular/material/slider';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
-import {FlexLayoutModule} from "@angular/flex-layout";
+import {FlexLayoutModule} from '@angular/flex-layout';
+
+
+
 
 @NgModule({
   declarations: [
@@ -34,7 +37,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     SearchBarComponent,
     WelcomeComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
