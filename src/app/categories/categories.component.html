@@ -1,10 +1,7 @@
-<p>categories</p>
-<div class="dropdown">
-  <button class="dropbtn">All Categories</button>
-  <div class="dropdown-content">
-    <a href="#">Cars</a>
-    <a href="#">Furniture</a>
-    <a href="#">home tech</a>
-    <a href="#">Houses</a>
-  </div>
-</div>
+<mat-form-field appearance="fill">
+  <mat-label>Category</mat-label>
+  <mat-select>
+    <mat-option>None</mat-option>
+    <mat-option *ngFor="let category of Categories" [value]="category">{{category}}</mat-option>
+  </mat-select>
+</mat-form-field>

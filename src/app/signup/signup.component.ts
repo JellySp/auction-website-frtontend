@@ -13,8 +13,11 @@ export class SignupComponent implements OnInit {
 
   constructor() { }
   signupGroup: FormGroup;
+  gender: string;
   ngOnInit(): void {
   }
 
 
+  register(): void {
+  }
 }

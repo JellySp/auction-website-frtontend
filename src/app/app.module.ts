@@ -25,6 +25,12 @@ import {MatMenuModule} from '@angular/material/menu';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule, MatOptionModule} from '@angular/material/core';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatListModule} from '@angular/material/list';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatSelect, MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -61,7 +67,14 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule,
+    MatListModule,
+    MatTabsModule,
+    MatOptionModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
