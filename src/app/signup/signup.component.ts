@@ -10,15 +10,6 @@ import {Signup} from '../models/signup';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-
-  // constructor(private snacbar: MatSnackBar, private formBuilder: FormBuilder, private signupService: SignupService) { }
-  // signupGroup: FormGroup;
-  ngOnInit(): void {
-    // this.signupGroup = this.formBuilder.group({
-    //   username: '',
-    //   password: ''
-    // });
-  }
   // tslint:disable-next-line:typedef
   // signup(){
   //   const signup = new Signup(this.signupGroup.get('username').value, this.signupGroup.get('password').value);
@@ -33,5 +24,15 @@ export class SignupComponent implements OnInit {
   //   );
   //
   // }
+  signupGroup: any;
+
+  // constructor(private snacbar: MatSnackBar, private formBuilder: FormBuilder, private signupService: SignupService) { }
+  // signupGroup: FormGroup;
+  ngOnInit(): void {
+    // this.signupGroup = this.formBuilder.group({
+    //   username: '',
+    //   password: ''
+    // });
+  }
 
 }
