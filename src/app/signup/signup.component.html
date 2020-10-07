@@ -6,6 +6,10 @@
   <mat-card-content>
     <form class="my-form">
       <mat-form-field class="full-width">
+        <mat-label>Username</mat-label>
+        <input  matInput  placeholder="Username"  name="username"  required>
+      </mat-form-field>
+      <mat-form-field class="full-width">
         <mat-label>First Name</mat-label>
         <input  matInput  placeholder="First name"  name="fname"  required>
       </mat-form-field>
@@ -19,21 +23,16 @@
       </mat-form-field>
       <mat-form-field class="full-width">
         <mat-label>Email</mat-label>
-        <input  matInput  placeholder="Email" name="email">
+        <input  matInput  placeholder="Email" name="email" required>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Phone Number</mat-label>
+        <input  matInput  placeholder="Phone Number"  name="phoneNumber"  required>
       </mat-form-field>
       <mat-form-field class="full-width">
         <mat-label>Password</mat-label>
-        <input  matInput  placeholder="Password"  name="password">
+        <input  matInput  placeholder="Password"  name="password" required>
       </mat-form-field>
-      <section class="example-section">
-        <label class="example-margin">Gender:</label>
-        <mat-radio-group > <!--[(ngModel)]="gender" removed from here-->
-          <mat-radio-button class="example-margin" value="Male">Male</mat-radio-button>
-          <mat-radio-button class="example-margin" value="Female">Female</mat-radio-button>
-          <mat-radio-button class="example-margin" value="Other">Other</mat-radio-button>
-        </mat-radio-group>
-      </section>
-
       <mat-form-field>
         <mat-label>Date of Birth</mat-label>
         <input matInput [matDatepicker]="picker" placeholder="Choose a date">

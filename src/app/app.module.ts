@@ -31,6 +31,8 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatListModule} from '@angular/material/list';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatSelect, MatSelectModule} from '@angular/material/select';
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import {AppInterceptor} from './shared/interceptor/app.interceptor';
 
 
 @NgModule({
@@ -76,7 +78,11 @@ import {MatSelect, MatSelectModule} from '@angular/material/select';
     MatOptionModule,
     MatSelectModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AppInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule {
