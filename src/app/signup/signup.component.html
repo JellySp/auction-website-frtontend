@@ -4,38 +4,38 @@
 </mat-toolbar>
 <mat-card class="my-card">
   <mat-card-content>
-    <form class="my-form">
+    <form class="my-form" [formGroup]="signupGroup">
       <mat-form-field class="full-width">
         <mat-label>Username</mat-label>
-        <input  matInput  placeholder="Username"  name="username"  required>
+        <input formControlName="username"  matInput  placeholder="Username"  name="username"  required>
       </mat-form-field>
       <mat-form-field class="full-width">
         <mat-label>First Name</mat-label>
-        <input  matInput  placeholder="First name"  name="fname"  required>
+        <input formControlName="firstName"  matInput  placeholder="First name"  name="firstName"  required>
       </mat-form-field>
       <mat-form-field class="full-width">
         <mat-label>Last Name</mat-label>
-        <input  matInput  placeholder="Last Name" name="lname"  required>
+        <input formControlName="lastName"  matInput  placeholder="Last Name" name="lastName"  required>
       </mat-form-field>
       <mat-form-field class="full-width">
         <mat-label>Address</mat-label>
-        <input  matInput  placeholder="Address" name="address"  required>
+        <input formControlName="address"  matInput  placeholder="Address" name="address"  required>
       </mat-form-field>
       <mat-form-field class="full-width">
         <mat-label>Email</mat-label>
-        <input  matInput  placeholder="Email" name="email" required>
+        <input formControlName="email"  matInput  placeholder="Email" name="email" required>
       </mat-form-field>
       <mat-form-field class="full-width">
         <mat-label>Phone Number</mat-label>
-        <input  matInput  placeholder="Phone Number"  name="phoneNumber"  required>
+        <input formControlName="phoneNumber"  matInput  placeholder="Phone Number"  name="phoneNumber"  required>
       </mat-form-field>
       <mat-form-field class="full-width">
         <mat-label>Password</mat-label>
-        <input  matInput  placeholder="Password"  name="password" required>
+        <input formControlName="password"  matInput  placeholder="Password"  name="password" required>
       </mat-form-field>
       <mat-form-field>
         <mat-label>Date of Birth</mat-label>
-        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+        <input formControlName="date" matInput [matDatepicker]="picker" placeholder="Choose a date">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>

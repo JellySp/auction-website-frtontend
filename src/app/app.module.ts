@@ -31,8 +31,14 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatListModule} from '@angular/material/list';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatSelect, MatSelectModule} from '@angular/material/select';
-import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {AppInterceptor} from './shared/interceptor/app.interceptor';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {RouterModule} from '@angular/router';
+import { ProfileComponent } from './profile/profile.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {LayoutModule} from '@angular/cdk/layout';
 
 
 @NgModule({
@@ -46,7 +52,9 @@ import {AppInterceptor} from './shared/interceptor/app.interceptor';
     SearchBarComponent,
     WelcomeComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    ProfileComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +84,14 @@ import {AppInterceptor} from './shared/interceptor/app.interceptor';
     MatListModule,
     MatTabsModule,
     MatOptionModule,
-    MatSelectModule
+    MatSelectModule,
+    MatSnackBarModule,
+    HttpClientModule,
+    MatTooltipModule,
+    LayoutModule,
+    MatInputModule,
+    MatCheckboxModule,
+    FlexLayoutModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

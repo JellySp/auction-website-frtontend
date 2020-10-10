@@ -1,19 +1,19 @@
 import { Injectable } from '@angular/core';
+import {Login} from '../../models/Login';
 import {HttpClient} from '@angular/common/http';
-import {Signup} from '../models/signup';
 
 @Injectable({
   providedIn: 'root'
 })
-export class SignupService {
+export class LoginService {
 
-  private LOGIN_BASE_URL = 'signup';
+  private LOGIN_BASE_URL = 'login';
 
   constructor(private httpClient: HttpClient) {
   }
 
   // tslint:disable-next-line:typedef
-  public validateSignup(signup: Signup) {
-    return this.httpClient.post<Signup>(this.LOGIN_BASE_URL, signup);
+  public validateLogin(login: Login) {
+    return this.httpClient.post<Login>(this.LOGIN_BASE_URL, login);
   }
 }
