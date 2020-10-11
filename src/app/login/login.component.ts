@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {MatSnackBar} from '@angular/material/snack-bar';
-import {Login} from '../models/Login';
+import {Login} from '../shared/models/login';
 import {LoginService} from '../shared/services/login.service';
 
 @Component({

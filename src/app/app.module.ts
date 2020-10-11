@@ -5,7 +5,7 @@ import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
 import {CategoriesComponent} from './categories/categories.component';
-import {ProductTableComponent} from './product-table/product-table.component';
+import {ProductComponent} from './product/product.component';
 import {NotFoundComponent} from './not-found/not-found.component';
 import {SearchBarComponent} from './search-bar/search-bar.component';
 import {WelcomeComponent} from './welcome/welcome.component';
@@ -39,6 +39,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {LayoutModule} from '@angular/cdk/layout';
+import { AddProductComponent } from './product/add-product/add-product.component';
 
 
 @NgModule({
@@ -47,14 +48,15 @@ import {LayoutModule} from '@angular/cdk/layout';
     HeaderComponent,
     FooterComponent,
     CategoriesComponent,
-    ProductTableComponent,
+    ProductComponent,
     NotFoundComponent,
     SearchBarComponent,
     WelcomeComponent,
     LoginComponent,
     SignupComponent,
     ProfileComponent,
-    DashboardComponent
+    DashboardComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
