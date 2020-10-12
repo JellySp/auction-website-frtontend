@@ -1,22 +1,5 @@
 <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
-  <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of [1,2,3,4,5,6,7]">
-    <mat-card class="mat-elevation-z4">
-      <mat-card-header>
-        <mat-card-title>Epic PC 3000 {{num}}</mat-card-title>
-      </mat-card-header>
-      <img class="product-image" mat-card-image
-           src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQdONO4zbw4-f3A6HStevjZ565Z_S7TE0lDuw&usqp=CAU"
-           alt="Epic PC 3000">
-      <mat-card-content>
-        <p>CPU: Intel i7-9700k</p>
-        <p>RAM:16GB DDR4</p>
-        <p>GPU: Nvidia RTX 2080Ti</p>
-        <p>SSD: 1TB</p>
-        <p>HDD: 1TB</p>
-      </mat-card-content>
-    </mat-card>
-  </div>
-  <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let product of products">
+  <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let product of products" (click)="onSelect(product)">
     <mat-card class="mat-elevation-z4">
       <mat-card-header>
         <mat-card-title>{{product.name | uppercase}}</mat-card-title>
@@ -27,9 +10,13 @@
       <mat-card-content>
         <p>Product id:{{product.id}}</p>
         <p>{{product.description}}</p>
-        <p>{{product.price}}</p>
+        <p>{{product.price | currency}}</p>
         <p>{{product.endDate}}</p>
+        <p>{{product.category | uppercase}}</p>
       </mat-card-content>
     </mat-card>
+  </div>
+  <div fxFlex>
+    <app-product-detail [product]="selectedProduct"></app-product-detail>
   </div>
 </div>

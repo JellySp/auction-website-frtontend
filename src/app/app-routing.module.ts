@@ -15,6 +15,7 @@ const routes: Routes = [
   {path: 'product', component: ProductComponent},
   {path: 'add-product', component: AddProductComponent}, // add product
   {path: 'profile', component: ProfileComponent}, // profile
+  {path: 'welcome', component: WelcomeComponent},
   {path: '**', component: NotFoundComponent} // ** for anything else. NB! This has to be the last route
 ];
 

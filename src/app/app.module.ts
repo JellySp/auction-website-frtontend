@@ -40,6 +40,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {LayoutModule} from '@angular/cdk/layout';
 import { AddProductComponent } from './product/add-product/add-product.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { AddProductComponent } from './product/add-product/add-product.component
     SignupComponent,
     ProfileComponent,
     DashboardComponent,
-    AddProductComponent
+    AddProductComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
