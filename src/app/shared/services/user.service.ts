@@ -22,8 +22,8 @@ export class UserService {
   getAllUsers() {
     return this.httpClient.get<User[]>(this.USER_BASE_URL);
   }
-  updateUser() {
-    return this.httpClient.put<User>(this.USER_BASE_URL.concat('/id'), User);
+  updateUser(user: User) {
+    return this.httpClient.put<User>(this.USER_BASE_URL.concat('/id'), user);
   }
   deleteUser(id: number) {
     return this.httpClient.delete<User>(this.USER_BASE_URL + id);

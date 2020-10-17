@@ -15,21 +15,23 @@ export class SignupComponent implements OnInit {
   signupGroup: FormGroup;
   ngOnInit(): void {
     this.signupGroup = this.formBuilder.group({
+      id: undefined,
       username: '',
       firstName: '',
       lastName: '',
       address: '',
       email: '',
       phoneNumber: '',
-      password: ''
+      password: '',
+      balance: ''
     });
   }
 
 
   register(): void {
-    const user = new User(this.signupGroup.get('id').value, this.signupGroup.get('username').value, this.signupGroup.get('firstName').value, this.signupGroup.get('lastName').value, this.signupGroup.get('address').value, this.signupGroup.get('email').value, this.signupGroup.get('phoneNumber').value, this.signupGroup.get('password').value);
+    const user = new User(this.signupGroup.get('id').value, this.signupGroup.get('username').value, this.signupGroup.get('firstName').value, this.signupGroup.get('lastName').value, this.signupGroup.get('address').value, this.signupGroup.get('email').value, this.signupGroup.get('phoneNumber').value, this.signupGroup.get('password').value, this.signupGroup.get('balance').value);
     this.userService.addUser(user).subscribe(
-      value => window.location.assign('/app'),
+      value => window.location.assign('/welcome'),
       error => {
         this.snackbar.open(error.error.message.concat(error.error.details[0]), 'close', {
           duration: 6000,
