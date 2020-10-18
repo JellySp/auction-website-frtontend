@@ -9,11 +9,15 @@ import {Product} from '../shared/models/product';
 })
 export class ProductComponent implements OnInit {
   products: Product[];
+  selectedProduct: Product;
 
-  constructor(private productTableService: ProductService) {
+  constructor(private productService: ProductService) {
   }
 
   ngOnInit(): void {
-    this.productTableService.getAllProducts().subscribe(value => this.products = value);
+    this.productService.getAllProducts().subscribe(value => this.products = value);
+  }
+  onSelect(product: Product){
+    this.selectedProduct = product;
   }
 }

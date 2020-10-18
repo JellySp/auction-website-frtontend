@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   constructor(private snackbar: MatSnackBar, private formBuilder: FormBuilder, private loginService: LoginService) { }
   loginGroup: FormGroup;
   ngOnInit(): void {
+    localStorage.removeItem('isLoginValid');
     this.loginGroup = this.formBuilder.group({
       username: '',
       password: ''
@@ -23,7 +24,10 @@ export class LoginComponent implements OnInit {
   login(){
     const login = new Login(this.loginGroup.get('username').value, this.loginGroup.get('password').value);
     this.loginService.validateLogin(login).subscribe(
-      value => window.location.assign('/app'),
+      value => {
+        localStorage.setItem('isLoginValid', 'true');
+        window.location.assign('/welcome');
+      },
       error => {
         this.snackbar.open(error.error.message.concat(error.error.details[0]), 'close', {
           duration: 6000,
@@ -33,6 +37,7 @@ export class LoginComponent implements OnInit {
     );
 
   }
+
 
 
 }

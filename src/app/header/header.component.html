@@ -6,13 +6,14 @@
       <a mat-button><span class="fa fa-heart fa-lg"></span>Favorite</a>
     </span>
   <div fxLayout="row" fxShow="false" fxShow.gt-sm>
-    <a mat-button routerLink="/add-product"><span class="material-icons">library_add</span>Add</a>
-    <button mat-button routerLink="/login">
+    <a *ngIf="isLogged" mat-button routerLink="/add-product"><span class="material-icons">library_add</span>Add</a>
+    <button *ngIf="!isLogged" mat-button routerLink="/login">
       <mat-icon>power_settings_new</mat-icon>
       Login
     </button>
-    <a mat-button routerLink="/signup"><span class="fa fa-sign-in fa-lg"></span>Signup</a>
-    <a mat-button routerLink="/profile"><span class="fa fa-male fa-lg"></span>Profile</a>
+    <a *ngIf="!isLogged" mat-button routerLink="/signup"><span class="fa fa-sign-in fa-lg"></span>Signup</a>
+    <a *ngIf="isLogged" mat-button routerLink="/profile"><span class="fa fa-male fa-lg"></span>Profile</a>
+    <a *ngIf="isLogged" mat-button routerLink="/login"><span class="fa fa-sign-in fa-lg"></span>Logout</a>
     <span class="material-icons">shopping_cart</span>
   </div>
 </mat-toolbar>

@@ -1,0 +1,53 @@
+<div class="container"
+     fxLayout="row"
+     fxLayout.sm="column"
+     fxLayout.xs="column"
+     fxLayoutAlign.gt-md="space-around center"
+     fxLayoutGap="10px"
+     fxLayoutGap.xs="0">
+
+  <div fxFlex="40">
+    <mat-card *ngIf="product">
+      <mat-card-header>
+        <mat-card-title>
+          <h3>{{product.name | uppercase}}</h3>
+          <h4>{{product.description | uppercase}}</h4>
+        </mat-card-title>
+      </mat-card-header>
+      <img height="200px" class="product-image" mat-card-image
+           src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQdONO4zbw4-f3A6HStevjZ565Z_S7TE0lDuw&usqp=CAU"
+           alt="Epic PC 3000">
+      <mat-card-content>
+        <p>{{product.description}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div fxFlex="40">
+    <mat-list *ngIf="product">
+      <h1>End on: {{product.endDate | date}}</h1>
+      <mat-list-item>
+        <h3 matLine>Current Price: {{product.price | currency}}</h3>
+        <p matLine>Stars</p>
+        <p matLine></p>
+      </mat-list-item>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input matInput type="number">
+          <mat-error>Entire Correct Value</mat-error>
+        </mat-form-field>
+        <button mat-button type="submit" color="primary">Bid</button>
+      </form>
+      <mat-form-field class="example-full-width">
+        <mat-label>Leave a comment</mat-label>
+        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+      </mat-form-field>
+    </mat-list>
+  </div>
+
+</div>

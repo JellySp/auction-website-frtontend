@@ -7,6 +7,8 @@ import {SignupComponent} from './signup/signup.component';
 import {ProfileComponent} from './profile/profile.component';
 import {AddProductComponent} from './product/add-product/add-product.component';
 import {ProductComponent} from './product/product.component';
+import {AppComponent} from './app.component';
+import {ProductDetailComponent} from './product-detail/product-detail.component';
 
 const routes: Routes = [
   {path: '', component: WelcomeComponent}, // welcome
@@ -15,6 +17,8 @@ const routes: Routes = [
   {path: 'product', component: ProductComponent},
   {path: 'add-product', component: AddProductComponent}, // add product
   {path: 'profile', component: ProfileComponent}, // profile
+  {path: 'product-detail', component: ProductDetailComponent},
+  {path: 'welcome', component: WelcomeComponent},
   {path: '**', component: NotFoundComponent} // ** for anything else. NB! This has to be the last route
 ];
 

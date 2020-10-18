@@ -1,0 +1,102 @@
+<div class="sample" layout="column">
+  <mat-toolbar>
+    <div class="md-toolbar-tools">
+      <h3>
+        <span>Setting profile</span>
+      </h3>
+    </div>
+  </mat-toolbar>
+  <mat-card-content class="md-padding">
+    <mat-list>
+      <mat-card label="PROFILE">
+            <mat-card>
+              <form class="my-form" [formGroup]="profileGroup">
+
+                <div layout="" layout-sm="column">
+                  <mat-form-field fxFlex="">
+                    <label>User Name</label>
+                    <input formControlName="username"  matInput  placeholder="Username"  name="username"  required>
+                  </mat-form-field>
+                  <mat-form-field fxFlex="">
+                    <label>First name</label>
+                    <input formControlName="firstName"  matInput  placeholder="First name"  name="firstName"  required>
+                  </mat-form-field>
+                  <mat-form-field fxFlex="">
+                    <label>Last Name</label>
+                    <input formControlName="lastName"  matInput  placeholder="Last Name" name="lastName"  required>
+                  </mat-form-field>
+                </div>
+
+
+                <div layout="" layout-sm="column">
+                  <mat-form-field fxFlex=''>
+                    <label>Email</label>
+                    <input formControlName="email"  matInput  placeholder="Email" name="email" required>
+                  </mat-form-field>
+                  <mat-form-field fxFlex=''>
+                    <label>Phone</label>
+                    <input formControlName="phoneNumber"  matInput  placeholder="Phone Number"  name="phoneNumber"  required>
+                  </mat-form-field>
+                  <mat-form-field fxFlex="">
+                    <label>Address</label>
+                    <input formControlName="address"  matInput  placeholder="Address" name="address"  required>
+                  </mat-form-field>
+                </div>
+
+                <section layout="row" layout-sm="column" layout-align="end">
+                  <button mat-raised-button color="primary">Update Profile</button>
+                </section>
+              </form>
+            </mat-card>
+      </mat-card>
+      <mat-card label="SECURITY">
+        <div layout="column" layout-sm="column">
+
+          <mat-card-content class="md-padding">
+            <form name="passwordForm">
+              <mat-form-field fxFlex="">
+                <label>Current password</label>
+                <input ngModel="user.pass">
+              </mat-form-field>
+              <mat-form-field fxFlex="">
+                <label>New password</label>
+                <input ngModel="user.newpass">
+              </mat-form-field>
+              <mat-form-field fxFlex="">
+                <label>Confirm password </label>
+                <input ngModel="user.checkpass">
+              </mat-form-field>
+              <fieldset class="standard-2">
+
+
+                <section layout="row" layout-sm="column" layout-align="end">
+                  <button mat-raised-button color="primary">Update Password</button>
+                </section>
+              </fieldset>
+            </form>
+          </mat-card-content>
+        </div>
+      </mat-card>
+      <mat-card label="NOTIFICATION">
+      </mat-card>
+    </mat-list>
+  </mat-card-content>
+</div>
+<div class="sample" layout="column">
+  <mat-grid-list cols="2" rowHeight="200px">
+    <mat-grid-tile  >
+      <img height="200px">
+      {{user.username | uppercase}}
+      <mat-grid-tile-footer>
+        <h1>{{user.id | number}}</h1>
+        <h1>{{user.firstName | uppercase}}</h1>
+        <h1>{{user.lastName | uppercase}}</h1>
+        <h1>{{user.email}}</h1>
+        <h1>{{user.phoneNumber}}</h1>
+        <h1>{{user.address}}</h1>
+      </mat-grid-tile-footer>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+
