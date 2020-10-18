@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {LoginService} from '../shared/services/login.service';
+import {Login} from '../shared/models/login';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  isLogged: boolean;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
+    this.isLogged = false;
+    if (localStorage.getItem('isLoginValid') === 'true') {
+      this.isLogged = true;
+    }
   }
 
 }

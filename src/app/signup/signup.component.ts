@@ -29,7 +29,7 @@ export class SignupComponent implements OnInit {
 
 
   register(): void {
-    const user = new User(this.signupGroup.get('id').value, this.signupGroup.get('username').value, this.signupGroup.get('firstName').value, this.signupGroup.get('lastName').value, this.signupGroup.get('address').value, this.signupGroup.get('email').value, this.signupGroup.get('phoneNumber').value, this.signupGroup.get('password').value, this.signupGroup.get('balance').value);
+    const user = new User(0, this.signupGroup.get('username').value, this.signupGroup.get('password').value, this.signupGroup.get('firstName').value, this.signupGroup.get('lastName').value, this.signupGroup.get('email').value, this.signupGroup.get('phoneNumber').value, this.signupGroup.get('address').value, this.signupGroup.get('balance').value);
     this.userService.addUser(user).subscribe(
       value => window.location.assign('/welcome'),
       error => {

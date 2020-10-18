@@ -7,6 +7,7 @@ import {Product} from '../shared/models/product';
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
+  selectedProduct: Product;
 
   @Input()
   product: Product;
@@ -14,5 +15,11 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onSelect(product: Product){
+    this.selectedProduct = product;
+  }
 
+  submitBid() {
+
+  }
 }
